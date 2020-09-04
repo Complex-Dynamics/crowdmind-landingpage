@@ -6,12 +6,15 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 
 const Layout = ({ activePage, children }) => (
-  <>
+  <section
+    style={{ minHeight: '100vh' }}
+    className="flex flex-col justify-between"
+  >
     <SEO activePage={activePage} />
     <Navbar />
     <main>{children}</main>
     <Footer />
-  </>
+  </section>
 );
 
 Layout.propTypes = {

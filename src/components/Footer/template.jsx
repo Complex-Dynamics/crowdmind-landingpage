@@ -28,7 +28,7 @@ const Footer = () => {
   const { btnText, imprint, policy } = footer;
 
   return (
-    <footer className="absolute bottom-0 z-50 w-full bg-white-200">
+    <footer className="relative z-50 w-full bg-white-200">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <div className="flex-col sm:flex-row flex items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8 uppercase cm-btn text-primary-300">
           <Button>{btnText}</Button>

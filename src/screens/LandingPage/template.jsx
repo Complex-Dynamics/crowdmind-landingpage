@@ -21,10 +21,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <div className="absolute top-0 left-0 h-screen w-full">
+      <div className="fixed top-0 left-0 h-screen w-full">
         <img
           src={Background}
-          className="absolute top-0 left-0 z-0 object-cover h-screen"
+          className="absolute top-0 left-0 z-0 object-cover h-screen w-full"
           alt="svg background with triangles"
         />
         <Img
@@ -32,8 +32,11 @@ const IndexPage = ({ data }) => {
           className="absolute top-0 left-0 w-3/4 h-screen object-cover"
         />
       </div>
-      <section className="container mx-auto relative items-center justify-center pt-32">
-        <div className="px-8 text-primary-300 space-y-4">
+      <section
+        className="container mx-auto relative pt-32 space-y-32 pb-16 md:pb-32 flex flex-col lg:flex-row lg:items-center lg:space-y-0 lg:py-24 lg:justify-between"
+        style={{ minHeight: '90vh' }}
+      >
+        <div className="px-8 text-primary-300 space-y-4 md:pl-16">
           <div>
             <h1
               className="sm:title title-sm break-words"
@@ -45,8 +48,10 @@ const IndexPage = ({ data }) => {
             {btnText}
           </Button>
         </div>
-        <div>
+        <div className="px-8 space-y-8 flex flex-col items-center md:flex-row md:space-y-0 md:space-x-8 md:items-stretch lg:flex-col lg:space-x-0 lg:space-y-8">
           <SmallCard {...features} />
+          <SmallCard {...help} />
+          <SmallCard {...aboutUs} />
         </div>
       </section>
     </Layout>
