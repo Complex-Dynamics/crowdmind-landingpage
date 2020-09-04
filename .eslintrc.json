@@ -1,0 +1,37 @@
+{
+  "extends": ["airbnb"],
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    // your custom rules here
+    "comma-dangle": "off",
+    "no-console": "off",
+    "import/prefer-default-export": "off",
+    "indent": "off",
+    "operator-linebreak": "off",
+    "react/forbid-prop-types": "off",
+    "object-curly-newline": "off",
+    "react/require-default-props": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "implicit-arrow-linebreak": "off",
+    "react/no-array-index-key": "off",
+    "no-confusing-arrow": "off",
+    "no-plusplus": "off",
+    "function-paren-newline": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-curly-newline": "off",
+    "react/button-has-type": "off",
+    "no-restricted-globals": "off",
+    "consistent-return": "off",
+    "no-param-reassign": "off",
+    "no-continue": "off",
+    "react/no-danger": "off",
+    "react/jsx-props-no-spreading": "off"
+  }
+}
