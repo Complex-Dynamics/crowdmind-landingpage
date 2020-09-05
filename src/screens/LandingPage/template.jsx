@@ -1,14 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
-import Layout from '../../components/Layout';
-
 import Background from '../../images/backgrounds/features_background.svg';
+
+import Layout from '../../components/Layout';
 import Button from '../../components/Button';
 import SmallCard from '../../components/SmallCard';
 
-const IndexPage = ({ data }) => {
-  console.log(data);
+const LandingPage = ({ data }) => {
   const { landingPageData, background } = data;
   const {
     title,
@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
         />
       </div>
       <section
-        className="container mx-auto relative pt-32 space-y-32 pb-16 md:pb-32 flex flex-col lg:flex-row lg:items-center lg:space-y-0 lg:py-24 lg:justify-between"
+        className="container mx-auto relative pt-32 space-y-32 pb-16 md:pb-32 flex flex-col lg:flex-row lg:items-center justify-center lg:space-y-0 lg:py-24 lg:justify-between h-full"
         style={{ minHeight: '90vh' }}
       >
         <div className="px-8 text-primary-300 space-y-4 md:pl-16">
@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
               className="sm:title title-sm break-words"
               dangerouslySetInnerHTML={{ __html: title }}
             />
-            <h3 className="cm-h4">{subtitle}</h3>
+            <h3 className="cm-h4 sm:cm-h2">{subtitle}</h3>
           </div>
           <Button variant="white" className="cm-shadow-300">
             {btnText}
@@ -58,4 +58,11 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export default IndexPage;
+LandingPage.propTypes = {
+  data: PropTypes.shape({
+    landingPageData: PropTypes.object.isRequired,
+    background: PropTypes.object.isRequired
+  })
+};
+
+export default LandingPage;

@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Watermark from '../../images/icons/watermark.svg';
+
 import Button from '../Button';
 
 const Footer = () => {

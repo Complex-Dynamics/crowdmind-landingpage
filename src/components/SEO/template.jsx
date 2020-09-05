@@ -26,7 +26,6 @@ function SEO({ activePage }) {
         lang: 'en'
       }}
       title={activePage ? `${activePage} | ${title}` : title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: 'description',

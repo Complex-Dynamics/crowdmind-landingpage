@@ -15,23 +15,26 @@ export const pageQuery = graphql`
           title
           text
           btnText
+          btnTo
         }
         help {
           title
           text
           btnText
+          btnTo
         }
         aboutUs {
           title
           text
           btnText
+          btnTo
         }
       }
     }
     background: imageSharp(
       fluid: { originalName: { regex: "/background_2/" } }
     ) {
-      fluid {
+      fluid(maxWidth: 3000) {
         ...GatsbyImageSharpFluid
       }
     }

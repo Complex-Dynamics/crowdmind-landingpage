@@ -5,13 +5,13 @@ import SEO from '../SEO';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 
-const Layout = ({ activePage, children }) => (
+const Layout = ({ activePage, children, activeRoute }) => (
   <section
     style={{ minHeight: '100vh' }}
     className="flex flex-col justify-between"
   >
     <SEO activePage={activePage} />
-    <Navbar />
+    <Navbar activeRoute={activeRoute} />
     <main>{children}</main>
     <Footer />
   </section>
