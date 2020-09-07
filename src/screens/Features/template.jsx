@@ -30,7 +30,7 @@ const Features = ({ data }) => {
             <h1 className="sm:title title-sm break-words font-bold">{title}</h1>
             <h3 className="cm-h4 sm:cm-h2">{subtitle}</h3>
           </div>
-          <div className="flex flex-col space-y-4 items-start sm:flex-row sm:space-y-0 sm:space-x-8">
+          <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-8 max-w-170 sm:max-w-full">
             <Button variant="white" className="cm-shadow-300">
               {btnTexts.dashboard}
             </Button>

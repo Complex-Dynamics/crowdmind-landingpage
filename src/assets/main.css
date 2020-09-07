@@ -141,6 +141,10 @@
 
     letter-spacing: -0.08em;
   }
+
+  .max-w-170 {
+    max-width: 170px;
+  }
 }
 
 .cm-shadow-textBox {
