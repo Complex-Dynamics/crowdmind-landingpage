@@ -24,9 +24,17 @@ export const pageQuery = graphql`
         }
         createSurveys {
           title
+          content {
+            title
+            text
+          }
         }
         analyzeResults {
           title
+          content {
+            title
+            text
+          }
         }
       }
     }

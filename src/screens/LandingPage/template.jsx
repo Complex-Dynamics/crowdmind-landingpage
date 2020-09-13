@@ -1,8 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
-
-import Background from '../../images/backgrounds/features_background.svg';
 
 import Layout from '../../components/Layout';
 import Button from '../../components/Button';
@@ -20,18 +17,7 @@ const LandingPage = ({ data }) => {
   } = landingPageData.frontmatter;
 
   return (
-    <Layout>
-      <div className="fixed top-0 left-0 h-screen w-full">
-        <img
-          src={Background}
-          className="absolute top-0 left-0 z-0 object-cover h-screen w-full"
-          alt="svg background with triangles"
-        />
-        <Img
-          fluid={background.fluid}
-          className="absolute top-0 left-0 w-3/4 h-screen object-cover"
-        />
-      </div>
+    <Layout background={background}>
       <section
         className="container mx-auto relative pt-32 space-y-32 pb-16 md:pb-32 flex flex-col lg:flex-row lg:items-center justify-center lg:space-y-0 lg:py-24 lg:justify-between h-full"
         style={{ minHeight: '90vh' }}
@@ -61,8 +47,10 @@ const LandingPage = ({ data }) => {
 LandingPage.propTypes = {
   data: PropTypes.shape({
     landingPageData: PropTypes.object.isRequired,
-    background: PropTypes.object.isRequired
-  })
+    background: PropTypes.shape({
+      fluid: PropTypes.object.isRequired
+    }).isRequired
+  }).isRequired
 };
 
 export default LandingPage;
