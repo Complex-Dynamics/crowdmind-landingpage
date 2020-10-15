@@ -4,9 +4,10 @@ import { Link } from 'gatsby';
 import { ChevronRight } from '@material-ui/icons';
 
 const SmallCard = ({ title, text, btnText, btnTo }) => (
-  <div
-    className="py-2 px-4 border-primary-300 bg-white-100 space-y-4 rounded-lg max-w-sm w-full flex-col justify-between flex cm-shadow-200"
+  <Link
+    className="py-4 px-4 border-primary-300 bg-white-100 space-y-4 rounded-lg max-w-sm w-full flex-col justify-between flex cm-shadow-200"
     style={{ borderLeftWidth: '15px' }}
+    to={btnTo}
   >
     <div className="space-y-2">
       <h2 className="cm-h2 text-primary-300 capitalize">{title}</h2>
@@ -15,14 +16,11 @@ const SmallCard = ({ title, text, btnText, btnTo }) => (
         dangerouslySetInnerHTML={{ __html: text }}
       />
     </div>
-    <Link
-      to={btnTo}
-      className="flex items-center text-primary-300 uppercase cm-btn hover:text-primary-100 transition-all duration-500"
-    >
+    <button className="flex items-center text-primary-300 uppercase cm-btn hover:text-primary-100 transition-all duration-500">
       <ChevronRight />
       <p>{btnText}</p>
-    </Link>
-  </div>
+    </button>
+  </Link>
 );
 
 SmallCard.propTypes = {

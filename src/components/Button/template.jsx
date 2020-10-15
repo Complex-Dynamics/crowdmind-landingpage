@@ -8,14 +8,14 @@ const Button = ({ children, variant = 'primary', className }) => {
         return '';
       }
       case 'white': {
-        return 'bg-white-100 text-primary-300 border border-white-100 hover:border-primary-300 hover:bg-primary-300 hover:text-white-100';
+        return 'bg-white-100 text-primary-300 hover:bg-white-300';
       }
       case 'ghost': {
         return '';
       }
       default:
       case 'primary': {
-        return 'bg-primary-300 border border-primary-300 text-white-300 hover:bg-transparent hover:text-primary-300 cm-shadow-300';
+        return 'bg-primary-300 text-white-300 hover:bg-primary-200';
       }
     }
   };
